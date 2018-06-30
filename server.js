@@ -8,12 +8,12 @@ const app = express();
 const baseUrl = 'https://oauth-openid-testing.herokuapp.com';
 const strip = (str) => str.split('\n').filter(x => x && !x.startsWith('-----')).join('')
 
-app.get('/healthcheck', (req, res) =>
+app.get('/healthcheck', (req, res) => {
   res.json({
     ok: true,
     timestamp: (new Date()).getTime()
   })
-);
+});
 
 app.get('/favicon.ico', (req, res) => {
   res.status(204)
