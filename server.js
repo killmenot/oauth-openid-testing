@@ -16,7 +16,7 @@ app.get('/healthcheck', (req, res) =>
 
 app.get('/favicon.ico', (req, res) => res.status(204));
 
-app.get('/realms/NHS/protocol/openid-connect/auth', (req, res) => res.redirect(`${req.query.redirect_uri}?code=mzgybGPAr4tGi9fd`));
+app.get('/cicauth/realms/NHS/protocol/openid-connect/auth', (req, res) => res.redirect(`${req.query.redirect_uri}?code=mzgybGPAr4tGi9fd`));
 
 app.post('/oauth/token', (req, res) => {
   const data = {
