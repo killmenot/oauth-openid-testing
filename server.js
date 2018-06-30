@@ -29,7 +29,7 @@ app.post('/cicauth/realms/NHS/protocol/openid-connect/token', (req, res) => {
 
   res.json({
     session_state: uuidv4(),
-    id_token: jwt.encode(data, jwtSecret)
+    id_token: jwt.encode(data, jwtSecret, 'RS256')
   });
 });
 
