@@ -43,6 +43,8 @@ app.post('/cicauth/realms/NHS/protocol/openid-connect/token', (req, res) => {
     exp: 1530143787
   };
 
+  console.log(process.env.PRIVATE_KEY)
+
   res.json({
     session_state: uuidv4(),
     id_token: jwt.encode(data, process.env.PRIVATE_KEY, 'RS256')
