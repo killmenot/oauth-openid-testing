@@ -37,14 +37,17 @@ app.get('/cicauth/realms/NHS/protocol/openid-connect/auth', (req, res) => {
 });
 
 app.post('/cicauth/realms/NHS/protocol/openid-connect/token', (req, res) => {
+  const iat = (new Date).getTime() / 1000;
+  const exp = iat + 36000;
+
   const data = {
     nhsNumber: '943-476-5919',
     email: 'john.doe@example.org',
     iss: 'https://oauth-openid-testing.herokuapp.com/cicauth/realms/NHS',
     sub: '24400320',
     aud: 's6BhdRkqt3',
-    exp: 1311281970,
-    iat: 1311280970
+    exp: exp,
+    iat: iat
   };
 
   res.json({
