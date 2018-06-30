@@ -27,7 +27,6 @@ app.get('/cicauth/realms/NHS', (req, res) => {
     'account-service': `${baseUrl}/cicauth/realms/NHS/account`,
     'admin-api': `${baseUrl}/cicauth/admin`,
     'tokens-not-before': 0
-    }
   })
 });
 
