@@ -60,12 +60,9 @@ app.get('/cicauth/realms/NHS/protocol/openid-connect/certs', (req, res) => {
   res.json({
     'keys': [
       {
-        'kid': '7XiMtuFHst1WmaJiIwIaVIfRNk49K9S5yVkKa2FYdp4',
-        'kty': 'RSA',
-        'alg': 'RS256',
-        'use': 'sig',
-        'n': 'r6pWiQA1aX7O2Ff2zAyapttRwafR7_DdHgNyyrjqi7j5oEvkyPts5F3ZHhKpsQuq_qJbtwdQiVGEcgIh7kqKTd_7xoqcLXVxNI49hKj7oQgt7_afPL4qnHPHkctK0Mj0pODpHuX2SDnMO6kDZV2oMGFIdFI_jsLe9rm5wqlMEjlPvzG3BntJO3vBP5envq-CA5Z-gBzpO8vqrylyG14CcvAER92AdY1FC-GtvqHP60sD2w9q7bQd42Qo1BbFRpS5SIIM5hallEqnGeMKU2kMJIIZh3YR6EaIXN6orMtBrrsFMkgslEtWQkk6Ohj7vJ9LHjuCTVD-m6fyzr4cTMVinQ',
-        'e': 'AQAB'
+        kty: 'RSA',
+        n: 'ixQRUnC2CzsdLlRd-Rzg_krBZ3buUiF5cR8hhFuanFqOo1HutBPP9oSLNu6Ef8kdgno-zjy824k-wMaTwUGebwz3Eh8G8Aqmc_NuQqvyoghJrLNiHaqhmU28KhRJfQbj7ZcPACPZWtWxa1U5QN8TT--3whQUhbpSg9j6XD-TS-U',
+        e: 'AQAB'
       }
     ]
   });
