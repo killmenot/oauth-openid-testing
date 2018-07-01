@@ -66,6 +66,11 @@ app.get('/cicauth/realms/NHS/protocol/openid-connect/certs', (req, res) => {
   });
 });
 
+app.get('/cicauth/realms/NHS/protocol/openid-connect/logout', (req, res) => {
+  const data = {};
+  res.json(data);
+});
+
 const server = app.listen(process.env.PORT || 3000, () => {
   console.info('Express server listening on port ' + server.address().port);
 });
