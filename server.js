@@ -35,8 +35,9 @@ app.get('/cicauth/realms/NHS/protocol/openid-connect/auth', (req, res) => {
 });
 
 app.post('/cicauth/realms/NHS/protocol/openid-connect/token', (req, res) => {
-  const iat = Date.now() / 1000;
-  const exp = iat + 36000;
+  const now = Date.now() / 1000;
+  const iat = now - 24 * 60 * 60;
+  const exp = now + 24 * 60 * 60;
 
   const data = {
     nhsNumber: '943-476-5919',
